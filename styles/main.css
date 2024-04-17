@@ -1,0 +1,523 @@
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Reset some default styles */
+body {
+
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Mono", monospace;
+    max-width: 100%;
+    /* Set max-width to prevent exceeding viewport */
+    overflow-x: hidden;
+
+
+}
+
+
+
+p {
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    /* Aligns items to each end of the flex container */
+    align-items: center;
+    /* Vertically center items */
+    background-color: #ffdf29;
+    padding: 10px;
+    text-align: left;
+    width: 100%;
+    transition: background-color 0.5s ease;
+}
+
+.navbar.orange {
+    background-color: #ff6600;
+}
+
+.li {
+    /* position: absolute; */
+    display: none;
+}
+
+a:hover+.li {
+
+    color: white;
+
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #ffffff;
+    /* White text color */
+    font-weight: bold;
+    font-size: 18px;
+ 
+    margin-left: 15px;
+}
+
+.connection {
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 20px;
+    color: #ffffff;
+}
+
+
+
+
+
+.heading-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.welc {
+    margin-left: 30px;
+
+}
+
+.name-container {
+    display: flex;
+  
+    margin-top: 5px;
+}
+
+.tab-text {
+    height: 50px;
+    width: 250px;
+
+    margin-left: 30px;
+    color: rgb(0, 0, 0);
+    /* position: absolute; */
+    font-size: 18px;
+    font-weight: 200;
+}
+
+
+
+/* Tablet Viewport (up to 768px width) */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 10px;
+        /* Adjust padding for tablets */
+    }
+
+    .navbar a {
+        font-size: 16px;
+        /* Adjust font size for tablets */
+    }
+}
+
+/* Phone Viewport (up to 480px width) */
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding: 5px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+        /* Adjust font size for phones */
+    }
+
+
+}
+
+nav ul li {
+    color: #00ED64;
+    font-size: 16px;
+    margin: 10px;
+}
+
+
+
+.form-creation {
+    position: relative;
+    /* Add this line for positioning context */
+    display: flex;
+
+    align-items: center;
+    margin-top: 10px;
+    height: auto;
+    transition: height 0.3s ease-in-out;
+}
+
+.box {
+    position: absolute;
+    width: auto;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    left: 50px;
+    top: 40px;
+    /* Adjust this value */
+    border: 2px solid #ff6600;
+    z-index: 1;
+    transition: height 0.3s ease-in-out;
+}
+
+.box-2 {
+    position: absolute;
+    height: 100px;
+    background-color: #ff6600;
+    border-radius: 10px;
+    left: 50px;
+    top: 15px;
+    /* Adjust this value */
+    z-index: 0;
+}
+
+
+#tab_name {
+    height: 20px;
+    width: 280px;
+    position: relative;
+    top: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: rgb(255, 102, 0);
+
+    border: none;
+    outline: none;
+}
+
+.box label {
+    font-size: 20px;
+    line-break: 20px;
+    margin-left: 3px;
+    /* margin-top: 10%; */
+}
+
+.box input {
+    /* padding : 8px; */
+    /* line-height: 20px; */
+    font-size: 15px;
+}
+
+
+
+button:hover {
+    
+    color: white;
+}
+
+span {
+    color: #00ED64
+}
+
+.field-name {
+    width: 150px;
+    margin-left: 15px;
+    margin-top: 20px;
+    height: 20px;
+}
+
+.data-type {
+    margin-left: 46px;
+    margin-right: 15px;
+    width: 150px;
+    height: 25px;
+}
+
+
+
+#create {
+    margin-left: 270px;
+    background-color: #00ED64;
+    margin-bottom: 10px;
+    margin-top: 25px;
+    border-radius: 5px;
+    border: 1px solid #057a36;
+    height: 22px;
+    width: 100px;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+#create:hover {
+    width: 110px;
+    height: 30px;
+}
+
+.login-container {
+    margin-left: 40%;
+}
+
+.login-box {
+    width: 300px;
+    height: 260px;
+    background-color: #ff6600;
+    position: absolute;
+    z-index: 1;
+    border: 2px solid #ff6600;
+    border-radius: 10px;
+
+}
+
+.login-box2 {
+    width: 300px;
+    height: 230px;
+    background-color: white;
+    position: absolute;
+    z-index: 0;
+    margin-top: 30px;
+    border-radius: 10px;
+    /* margin-bottom:30px ; */
+}
+
+.blog {
+    position: relative;
+    margin-top: 18%;
+  
+}
+
+
+.blog {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 150px;
+    justify-content: center;
+    /* Align cards in the center horizontally */
+}
+
+.card {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.card .card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #00ED64;
+}
+
+.card-text {
+    font-size: 16px;
+}
+
+
+.name-container1 {
+    display: flex;
+    margin-bottom: 30px;
+  
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+.tab-text1 {
+    height: 50px;
+    width: 250px;
+
+    margin-left: 30px;
+    color: rgb(0, 0, 0);
+    /* position: absolute; */
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.table-container {
+    
+    border: solid;
+    border-color: #333;
+}
+
+
+.field-whole {
+    display: none;
+    position: relative;
+    width: auto;
+    height: auto;
+}
+
+.field-form {
+    position: absolute;
+    left: 50px;
+    width: auto;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: 2px solid #ff6600;
+    transition: height 0.3s ease-in-out;
+}
+
+.detail-cont {
+    display: flex; /* Use flexbox to display contents in the same line */
+    align-items: center; /* Align items vertically in the center */
+}
+
+.field-name1 {
+    margin-left: 15px;
+   border: 2px solid;
+   border-color: #00ED64;
+    width: 120px;
+    height: 25px;
+    margin-top: 20px;
+    padding-left: 10px;
+}
+
+.field-value1 {
+    margin-left: 46px;
+     margin-right: 15px;
+    width: 150px;
+    margin-top: 20px;
+    height: 20px;
+}
+
+.tab-name {
+    height: 20px;
+    width: 250px;
+
+   
+    /* transform: translateX(-50%); */
+  
+    font-size: 18px;
+    font-weight: 500;
+    background-color: rgb(255, 102, 0);
+    border: none;
+    outline: none;
+    margin-top: 10px;
+    margin-left: 15px;
+    border-radius: 4px;
+    padding-bottom: 4px;
+    padding-left: 10px;
+}
+
+.insert-data {
+    margin-left: 240px;
+    background-color: #00ED64;
+    margin-bottom: 10px;
+    margin-top: 25px;
+    border-radius: 5px;
+    border: 1px solid #057a36;
+    height: 22px;
+    width: 100px;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.insert-data:hover {
+    width: 110px;
+    height: 30px;
+}
+
+
+
+.table-container {
+    display: none;
+   
+    margin-left: 60%;
+   
+    background-color: #fff;
+    border: 2px solid #ff6600;
+   
+    
+    border-radius: 5px;
+
+    height: 140px; /* Adjust height as needed */
+    overflow-y: auto; /* Add vertical scrollbar */
+    width: 600px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+#data-table {
+
+    width: 96%;
+    margin-top: 2px;
+    margin: 10px;
+    border: 1px solid #333
+}
+
+th, td {
+    border: 1px solid #333;
+}
+
+th, td {
+    padding: 5px 3px;
+    width: 20%;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+
+
+
+
+footer {
+    margin-top: 150px;
+    background-color: #17202A;
+    color: #3f7beb;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+   
+  }
+  
+  footer p {
+    font-size: 10px;
+  }
+  
+  footer p {
+    font-size: 10px;
+    font-family: 'Cutive Mono', monospace;
+    color: #fff;
+  }
+  
+  footer ul li a {
+    text-decoration: none;
+    color: #fff; /* Set the link color to white */
+  }
+  
+  .contact-details {
+    margin-top: 15px;
+  }
+  
+  .contact-details h3 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-details ul {
+    list-style: none;
+    padding: 0;
+  
+  }
+  
+  .contact-details ul li {
+    margin-bottom: 5px;
+  }
+  
+  .contact-details ul li {
+    color: #fff;
+    font-weight: bold;
+  }

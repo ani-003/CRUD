@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Window</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="#">Group 4</a>
+                <div class="li">
+                    <li> ARIJIT</li>
+                    <li>ANIRBAN</li>
+                    <li> ASIT</li>
+                    <li>ANIL</li>
+                    <li>GOURAB</li>
+                </div>
+            </div>
+
+            <div id="messageDiv" class="connection"></div>
+
+
+            <!-- <div class="" id="animatedText">
+                Database Available
+            </div>
+
+            <div class="connection animated-text" id="tableCreatedText" style="display: none;">
+                Table Created
+            </div> -->
+        </nav>
+    </header>
+
+
+
+    <div class="heading-container">
+
+        <div class="welc">
+            <h1>
+                <p>welcome to our DBMS project,</p>
+                <p> &nbsp &nbsp &nbsp &nbsp based on <span>CRUD</span> operation</p>
+            </h1>
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+    <div class="name-container">
+
+        <div class="tab-text">
+            <p>
+            <h4>Hey, lets create a table first!</h4>
+            </p>
+        </div>
+
+
+    </div>
+    <br>
+
+    <form id="form" action="#" method="post" enctype="multipart/form-data">
+        <div class="form-creation">
+            <div class="box" id="box">
+
+                <div class="field-box" id="field-box">
+
+                    <div class="field-info">
+
+
+
+                        <input placeholder="<field name>" type="text" class="field-name" id="dynamicInput"
+                            name="field1"  required/>
+
+                        <select class="data-type" name="type1" id="type" placeholder="type" required>
+
+                            <option value="" disabled selected>Select Type</option>
+
+                            <option value="INT">INT </option>
+                            <option value="VARCHAR(30)">VARCHAR</option>
+                            <option value="FLOAT">FLOAT </option>
+                            <option value="DOUBLE">DOUBLE </option>
+                            <option value="CHAR(30)"> CHAR</option>
+                            <option value="TEXT"> TEXT</option>
+                            <option value="DATE"> DATE</option>
+                            <option value="TIME"> TIME</option>
+                            <option value="BIGINT"> BIGINT</option>
+                            <option value="BOOLEAN"> BOOLEAN</option>
+                        </select>
+
+                    </div>
+
+                    <div class="field-info">
+
+
+
+                        <input type="text" class="field-name" id="dynamicInput" name="field2"  required/>
+
+                        <select class="data-type" name="type2" id="type" placeholder="type" required>
+
+                            <option value="" disabled selected></option>
+
+                            <option value="INT">INT </option>
+                            <option value="VARCHAR(30)">VARCHAR</option>
+                            <option value="FLOAT">FLOAT </option>
+                            <option value="DOUBLE">DOUBLE </option>
+                            <option value="CHAR(30)"> CHAR</option>
+                            <option value="TEXT"> TEXT</option>
+                            <option value="DATE"> DATE</option>
+                            <option value="TIME"> TIME</option>
+                            <option value="BIGINT"> BIGINT</option>
+                            <option value="BOOLEAN"> BOOLEAN</option>
+                        </select>
+
+                    </div>
+
+                    <div class="field-info">
+
+
+
+                        <input type="text" class="field-name" id="dynamicInput" name="field3"  required/>
+
+                        <select class="data-type" name="type3" id="type" placeholder="type" required>
+
+                            <option value="" disabled selected></option>
+
+                            <option value="INT">INT </option>
+                            <option value="VARCHAR(30)">VARCHAR</option>
+                            <option value="FLOAT">FLOAT </option>
+                            <option value="DOUBLE">DOUBLE </option>
+                            <option value="CHAR(30)"> CHAR</option>
+                            <option value="TEXT"> TEXT</option>
+                            <option value="DATE"> DATE</option>
+                            <option value="TIME"> TIME</option>
+                            <option value="BIGINT"> BIGINT</option>
+                            <option value="BOOLEAN"> BOOLEAN</option>
+                        </select>
+
+                    </div>
+
+                    <div class="field-info duplicate-div" id="originalDiv">
+
+
+
+                        <input type="text" class="field-name" id="dynamicInput" name="field4"  required/>
+
+                        <select class="data-type" name="type4" id="type" placeholder="type required">
+
+                            <option value="" disabled selected></option>
+
+                            <option value="INT">INT </option>
+                            <option value="VARCHAR(30)">VARCHAR</option>
+                            <option value="FLOAT">FLOAT </option>
+                            <option value="DOUBLE">DOUBLE </option>
+                            <option value="CHAR(30)"> CHAR</option>
+                            <option value="TEXT"> TEXT</option>
+                            <option value="DATE"> DATE</option>
+                            <option value="TIME"> TIME</option>
+                            <option value="BIGINT"> BIGINT</option>
+                            <option value="BOOLEAN"> BOOLEAN</option>
+                        </select>
+
+                    </div>
+
+                    <div class="field-info duplicate-div" id="originalDiv">
+
+
+
+                        <input type="text" class="field-name" id="dynamicInput" name="field5"  required/>
+
+                        <select class="data-type" name="type5" id="type" placeholder="type" required>
+
+                            <option value="" disabled selected></option>
+
+                            <option value="INT">INT </option>
+                            <option value="VARCHAR(30)">VARCHAR</option>
+                            <option value="FLOAT">FLOAT </option>
+                            <option value="DOUBLE">DOUBLE </option>
+                            <option value="CHAR(30)"> CHAR</option>
+                            <option value="TEXT"> TEXT</option>
+                            <option value="DATE"> DATE</option>
+                            <option value="TIME"> TIME</option>
+                            <option value="BIGINT"> BIGINT</option>
+                            <option value="BOOLEAN"> BOOLEAN</option>
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+                <div class="create-buttons">
+
+                    <div class="insert">
+                        <button id="create">Create Table</button>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="box-2" id="box-2">
+                <input type="text" name="tab_name" id="tab_name" placeholder="< table name >" required>
+
+            </div>
+        </div>
+    </form>
+
+    <br>
+    <br>
+    <br>
+
+
+    <div class="blog">
+        <div class="card" style="margin-left: 20px;">
+            <div class="card-body">
+                <h5 class="card-title">Create</h5>
+                <p class="card-text">The "Create" operation involves adding new data records to a database. This data
+                    needs to be allocated and initialized with content.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Read</h5>
+                <p class="card-text">The "Read" operation involves retrieving data from a database. It allows users to
+                    query and fetch existing records from one or more tables or collections based on specified criteria.
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Update</h5>
+                <p class="card-text">The "Update" operation involves modifying existing data records within a database.
+                    It allows users to change the values of one or more fields in a particular record or set of records.
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Delete</h5>
+                <p class="card-text">The "Delete" operation involves removing data records from a database. Data is
+                    finalized and deallocated.</p>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>
+
+
+
+    <div class="field-whole">
+
+        <div class="name-container1">
+
+            <div class="tab-text1" style="margin-left: 20px;">
+                <p>
+                <h4>Now, insert records into the table.</h4>
+                </p>
+            </div>
+    
+    
+        </div>
+        
+        
+
+        <div class="field-form" id="box">
+            <div class="tab-name"></div>
+            <form id="form1" action="#" method="post" enctype="multipart/form-data">
+
+                <div class="detail-cont">
+                    <div id="label1" class="field-name1"></div>
+                    <input type="text" class="field-value1" placeholder="enter value" name="value1" required>
+                </div>
+                <div class="detail-cont">
+                    <div id="label2" class="field-name1"></div>
+                    <input type="text" class="field-value1" name="value2" required>
+                </div>
+                <div class="detail-cont">
+                    <div id="label3" class="field-name1"></div>
+                    <input type="text" class="field-value1" name="value3" required>
+                </div>
+                <div class="detail-cont">
+                    <div id="label4" class="field-name1"></div>
+                    <input type="text" class="field-value1" name="value4" required>
+                </div>
+                <div class="detail-cont">
+                    <div id="label5" class="field-name1"></div>
+                    <input type="text" class="field-value1" name="value5" required>
+                </div>
+
+                <div class="insert1">
+                    <button class="insert-data" id="insertRecordButt">Insert Record</button>
+                </div>
+
+
+
+            </form>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="table-container">
+        <table id="data-table">
+            <!-- Table header will be dynamically populated -->
+            <thead>
+                <tr>
+                    <th id="tlabel1"></th>
+                    <th id="tlabel2"></th>
+                    <th id="tlabel3"></th>
+                    <th id="tlabel4"></th>
+                    <th id="tlabel5"></th>
+                </tr>
+            </thead>
+            <!-- Table body will be dynamically populated -->
+            <tbody id="data-rows">
+                <!-- Data rows will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+    
+
+
+
+<br>
+<br>
+<br><br>
+
+    
+<footer id="footer">
+    <p>&copy; 2023 My Website. All rights reserved.</p>
+    <div class="contact-details">
+      <h3>Members :</h3>
+      <ul>
+        <li>Student1</li>
+        <li>Student1</li>
+        <li>Student1</li>
+        <li>Student1</li>
+        <li>Student1</li>
+      </ul>
+    </div>
+    <div class="contact-details">
+      <h3>Roll Number</h3>
+      <ul>
+        <li>roll1</li>
+        <li>roll1</li>
+        <li>roll1</li>
+        <li>roll1</li>
+        <li>roll1</li>
+      </ul>
+    </div>
+  </footer>
+
+
+    <script src="./scripts/main.js"></script>
+
+
+
+
+</body>
+
+</html>
